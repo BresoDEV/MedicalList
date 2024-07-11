@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Medical List</title>
+
+</head>
+
+<style>
+
+    * {
+
+        margin: 0;
+
+        padding: 0;
+
+        border: 0;
+
+        font-family: 'Open Sans';
+
+        color: rgb(0, 0, 0);
+
+        cursor: pointer;
+
+        user-select: none;
+
+        -webkit-tap-highlight-color: transparent;
+
+        -webkit-touch-callout: none;
+
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    }
+
+
+
+    html,
+
+    body {
+
+        background-color: rgb(255, 255, 255);
+
+    }
+
+
+
+    .topo {
+
+        margin-left: 10%;
+
+        width: 73%;
+
+        background-color: rgb(255, 255, 255);
+
+        padding: 3%;
+
+        margin-top: 20px;
+
+        border-radius: 15px;
+
+        box-shadow: 5px 5px 22px #666;
+
+    }
+
+
+
+    table {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+
+
+
+
+
+
+    input,
+
+    select,
+
+    option {
+
+        width: 80%;
+
+        padding: 5px;
+
+        border-radius: 5px;
+
+        margin-top: 3px;
+
+        background-color: rgb(255, 255, 255);
+
+        border: 1px solid #666;
+
+    }
+
+
+
+    th {
+
+        color: rgb(0, 0, 0);
+
+    }
+
+
+
+    .vm {
+
+        background-color: rgb(171, 58, 58);
+
+    }
+
+
+
+    .w50 {
+
+        width: 100%;
+
+        padding: 2px;
+
+    }
+
+
+
+    button {
+
+        width: 100%;
+
+        padding: 5px;
+
+        border-radius: 5px;
+
+        background-color: rgb(54, 144, 96);
+
+        color: aliceblue;
+
+    }
+
+
+
+    .button2 {
+
+        padding: 5px;
+
+        border-radius: 5px;
+
+        background-color: rgb(54, 144, 96);
+
+        color: aliceblue;
+
+        width: 40%;
+
+    }
+
+
+
+    hr {
+
+        background-color: rgb(255, 255, 255);
+
+        margin-bottom: 2px;
+
+        margin-top: 2px;
+
+        padding-bottom: 1px;
+
+
+
+    }
+
+
+
+    textarea {
+
+        width: 90%;
+
+        resize: none;
+
+        background-color: transparent;
+
+        border-radius: 10px;
+
+        padding: 5px;
+
+        color: rgb(0, 0, 0);
+
+        border: 1px solid #666;
+
+    }
+
+
+
+    details {
+
+        border-radius: 5px;
+
+        background-color: rgb(223, 223, 223);
+
+        margin-top: 4px;
+
+        padding: 6px;
+
+    }
+
+
+
+    p {
+
+        background-color: rgb(239, 199, 199);
+
+
+
+        padding: 3px;
+
+    }
+
+
+
+    .cima {
+
+        text-align: center;
+
+        border-radius: 5px 5px 0px 0px;
+
+    }
+
+
+
+    b {
+
+        color: rgb(8, 0, 247);
+
+    }
+
+
+
+    .baixo {
+
+        border-radius: 0px 0px 5px 5px;
+
+    }
+
+</style>
+
+
+
+<body>
+
+
+
+
+
+    <div class="topo">
+
+        <center>
+
+            <h2>&#128138;</h2>
+
+        </center><br>
+
+        <table>
+
+            <tr>
+
+                <td><label for="Sintoma">Sintoma</label></td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    <input list='listaSintomas' type="text" name="Sintoma" id="Sintoma" placeholder="Dor de Cabeça">
+
+                    <datalist id="listaSintomas">
+
+
+
+                    </datalist>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td><br></td>
+
+            </tr>
+
+            <tr>
+
+                <td><label for="Remedio">Remedio</label></td>
+
+            </tr>
+
+            <tr>
+
+                <td><input list="listaRemedio" name="Remedio" id="Remedio" placeholder="Paracetamol">
+
+                    <datalist id="listaRemedio">
+
+
+
+                    </datalist>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td><br></td>
+
+            </tr>
+
+            <tr>
+
+                <td><label for="OBS">Observações</label></td>
+
+            </tr>
+
+            <tr>
+
+                <td><textarea name="OBS" id="OBS" cols="30" rows="4" placeholder="2x ao dia"></textarea></td>
+
+            </tr>
+
+
+
+            <!--
+
+
+
+                &#129529;
+
+&#127858;
+
+&#129371;
+
+&#129524;
+
+&#128138;
+
+&#127813;
+
+&#127868;
+
+&#127829;
+
+            -->
+
+            <tr>
+
+                <td colspan="4">
+
+
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td colspan="2"><button id="Adicionar">Adicionar</button></td>
+
+            </tr>
+
+            <tr>
+
+                <td colspan="2"></td>
+
+            </tr>
+
+            <tr>
+
+                <td colspan="2">
+
+                    <hr>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td colspan="2"></td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td colspan="2"></td>
+
+            </tr>
+
+            <tr>
+
+                <td colspan="2"></td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+
+
+    <!------------------------------>
+
+    <div class="topo" id="table">
+
+
+
+    </div>
+
+
+
+
+
+    <div class="topo">
+
+        <textarea name="" id="dump" cols="30" rows="10"></textarea>
+
+        <button id="dumpster" onclick="dump()">Compartilhar/Carregar</button>
+
+        <center>
+
+            <p id='info'></p>
+
+        </center>
+
+    </div>
+
+
+
+</body>
+
+<script>
+
+
+
+    alimentarDatalist()
+
+    function alimentarDatalist() {
+
+
+
+        if (localStorage.getItem('ListaMedicamentos_Sintomas')) {
+
+
+
+            const dl = document.getElementById('listaSintomas')
+
+
+
+            var sintomas = localStorage.getItem('ListaMedicamentos_Sintomas').split('|')
+
+            sintomas.forEach(e => {
+
+
+
+                const option = document.createElement('option')
+
+                option.value = e
+
+                dl.appendChild(option)
+
+            });
+
+        }
+
+        //-------------------------------
+
+        if (localStorage.getItem('ListaMedicamentos_Remedios')) {
+
+
+
+            const dl = document.getElementById('listaRemedio')
+
+
+
+
+
+            var remedios = localStorage.getItem('ListaMedicamentos_Remedios').split('|')
+
+            remedios.forEach(e => {
+
+
+
+                const option = document.createElement('option')
+
+                option.value = e
+
+                dl.appendChild(option)
+
+            });
+
+        }
+
+    }
+
+
+
+
+
+
+
+    document.getElementById('Adicionar').addEventListener('click', () => {
+
+        var a = document.getElementById('Remedio').value
+
+        var b = document.getElementById('Sintoma').value
+
+        var c = document.getElementById('OBS').value
+
+        addItem(a, b, c)
+
+    })
+
+
+
+    function addItem(Remedio, Sintoma, OBS) {
+
+
+
+        if (localStorage.getItem('ListaMedicamentos_Sintomas')) {
+
+
+
+            if (!localStorage.getItem('ListaMedicamentos_Sintomas').includes(Sintoma)) {
+
+                localStorage.setItem('ListaMedicamentos_Sintomas', localStorage.getItem('ListaMedicamentos_Sintomas') + '|' + Sintoma)
+
+
+
+            }
+
+
+
+        } else {
+
+            localStorage.setItem('ListaMedicamentos_Sintomas', Sintoma)
+
+        }
+
+
+
+        //----------------------
+
+        if (localStorage.getItem('ListaMedicamentos_Remedios')) {
+
+            if (!localStorage.getItem('ListaMedicamentos_Remedios').includes(Remedio)) {
+
+                localStorage.setItem('ListaMedicamentos_Remedios', localStorage.getItem('ListaMedicamentos_Remedios') + '|' + Remedio)
+
+
+
+            }
+
+
+
+        } else {
+
+            localStorage.setItem('ListaMedicamentos_Remedios', Remedio)
+
+        }
+
+        //--------------------------
+
+
+
+        var index = 0;
+
+        for (let i = 0; i < 1000; i++) {
+
+            if (!localStorage.getItem('ListaMedicamentos_' + i)) {
+
+                index = i;
+
+                break;
+
+            }
+
+        }
+
+
+
+        var jaExiste = false;
+
+        var indexJaExiste = 0;
+
+
+
+        for (let x = 0; x < 1000; x++) {
+
+            if (localStorage.getItem('ListaMedicamentos_' + x)) {
+
+                if (localStorage.getItem('ListaMedicamentos_' + x).includes(Sintoma)) {
+
+                    indexJaExiste = x;
+
+                    jaExiste = true
+
+                    break;
+
+                }
+
+            }
+
+        }
+
+
+
+        if (jaExiste) {
+
+            var a = localStorage.getItem('ListaMedicamentos_' + indexJaExiste).replace('</summary>', 'edu')
+
+            var novoRemedio = `
+
+                           <br>
+
+                            <p class='cima'><b>${Remedio}</b></p>
+
+                            <p class='baixo'><i>- ${OBS}</i></p>
+
+                             
+
+                    `
+
+            var final = a.replace('edu', '</summary>' + novoRemedio)
+
+
+
+            localStorage.setItem('ListaMedicamentos_' + indexJaExiste, final)
+
+
+
+        }
+
+        else {
+
+            localStorage.setItem('ListaMedicamentos_' + index, `
+
+                    <details>
+
+                        <summary>
+
+                            ${Sintoma}
+
+                        </summary>
+
+                        <br>
+
+                            <p class='cima'><b>${Remedio}</b></p>
+
+                            <p class='baixo'><i>- ${OBS}</i></p>
+
+                            <br>
+
+                           <br>
+
+                           <button id="ID_${index}" class="vm">Remover</button>
+
+                    </details>
+
+                    `)
+
+
+
+        }
+
+
+
+
+
+        window.location.reload()
+
+    }
+
+
+
+    console.log(localStorage.getItem('ListaMedicamentos_Sintomas'))
+
+
+
+    const table = document.getElementById('table')
+
+    var events = []
+
+    var s = ''
+
+
+
+    for (let i = 0; i < 1000; i++) {
+
+        if (!localStorage.getItem('ListaMedicamentos_' + i)) {
+
+            break;
+
+        }
+
+        else {
+
+
+
+            var a = localStorage.getItem('ListaMedicamentos_' + i)//.split('|')
+
+
+
+            if (a[3] !== 'x') {
+
+                events.push(i)
+
+                s += a
+
+
+
+            }
+
+
+
+        }
+
+    }
+
+
+
+    if (s !== '') {
+
+        table.innerHTML = s;
+
+    }
+
+    else {
+
+        table.innerHTML = '<center>&#128138; Lista vazia &#128138;</center>';
+
+    }
+
+
+
+    events.forEach(element => {
+
+
+
+        document.getElementById('ID_' + element).addEventListener('click', () => {
+
+            localStorage.setItem('ListaMedicamentos_' + element, '')
+
+            window.location.reload()
+
+        })
+
+
+
+    });
+
+
+
+    function dump() {
+
+        const table = document.getElementById('dump')
+
+
+
+        if (table.value == '') {
+
+            s = ''
+
+            s += 'localStorage.setItem("ListaMedicamentos_Sintomas","' + localStorage.getItem("ListaMedicamentos_Sintomas") + '");\n'
+
+            s += 'localStorage.setItem("ListaMedicamentos_Remedios","' + localStorage.getItem("ListaMedicamentos_Remedios") + '");\n'
+
+
+
+
+
+
+
+            for (let i = 0; i < 1000; i++) {
+
+                if (localStorage.getItem('ListaMedicamentos_' + i)) {
+
+                    s += 'localStorage.setItem("ListaMedicamentos_' + i + '",`' + localStorage.getItem("ListaMedicamentos_" + i) + '`);\n'
+
+
+
+                }
+
+                else {
+
+                    break
+
+                }
+
+            }
+
+            s = s.replace(/\n/g, '')
+
+            s = s.replace(/  /g, '')
+
+            table.value = cripto(s);
+
+            table.select()
+
+            document.execCommand('copy')
+
+            setTimeout(() => {
+
+                table.value = 'Codigo copiado com sucesso!!'
+
+                setTimeout(() => {
+
+                    table.value = ''
+
+                }, 3000);
+
+            }, 1000);
+
+        }
+
+        else {
+
+            eval(cripto(table.value))
+
+            window.location.reload()
+
+        }
+
+    }
+
+    function cripto(m) {
+
+        return m.replace(/[A-Za-z]/g, (c) => {
+
+            return String.fromCharCode(c.charCodeAt(0) +
+
+                (c.toLowerCase() < 'n' ? 13 : -13))
+
+        })
+
+    }
+
+
+
+    setInterval(() => {
+
+        //dumpster
+
+        const table = document.getElementById('dump')
+
+        const dumpster = document.getElementById('dumpster')
+
+        const info = document.getElementById('info')
+
+
+
+        if (table.value == '') {
+
+            dumpster.textContent = 'Gerar'
+
+            info.innerHTML = 'Clique para gerar o codigo da sua lista e enviar aos seus amigos!'
+
+        }
+
+        else if (table.value.includes('>')) {
+
+            dumpster.textContent = 'Carregar'
+
+            info.innerHTML = 'Ao carregar uma lista, a sua antiga será apagada'
+
+        }
+
+        else {
+
+            dumpster.textContent = 'Codigo gerado'
+
+            info.innerHTML = ''
+
+        }
+
+
+
+    }, 500);
+
+</script>
+
+
+
+</html>
