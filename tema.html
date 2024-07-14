@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-family: 'Open Sans'; 
+        cursor: pointer; 
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
+
+    html,
+    body {
+        background-color: rgb(226, 209, 209);
+        height: 100%;
+    }
+    .dark{
+        margin-left: 10%;
+        width: 73%;
+        background-color: #333;
+        padding: 3%;
+        margin-top: 20px;
+        border-radius: 15px;
+        box-shadow: 5px 5px 22px rgb(0, 0, 0);
+        color: rgb(254, 254, 254);
+    }
+    .light{
+        margin-left: 10%;
+        width: 73%;
+        background-color: rgb(255, 255, 255);
+        padding: 3%;
+        margin-top: 20px;
+        border-radius: 15px;
+        box-shadow: 5px 5px 22px rgb(0, 0, 0);
+    }
+    h1{
+        font-size: 60px;
+    }
+    h3{
+        font-size: 70px;
+        margin-bottom: 0;
+    }
+</style>
+<body>
+    <center>
+        <h3>&#128138;</h3>
+        <h1>
+            
+            Medical<br>List
+        </h1>
+    </center>
+    <div class="dark" id="dark">
+        <center>
+            <h2>Tema Dark</h2>
+        </center>
+    </div>
+    <div class="light" id="light">
+        <center>
+            <h2>Tema Light</h2>
+        </center>
+    </div>
+    <center><br><br>
+        <b>by BresoDEV</b>
+    </center>
+</body>
+<script>
+
+document.getElementById('dark').addEventListener('click', () => {
+        
+        window.location.href ='dark.html' 
+    })
+
+document.getElementById('light').addEventListener('click', () => {
+        
+        window.location.href ='light.html' 
+    })
+
+
+
+</script>
+</html>

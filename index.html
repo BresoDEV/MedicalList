@@ -1,177 +1,217 @@
-<!DOCTYPE html>
-
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt_br">
 
 <head>
+  <meta charset="utf-8">
+  <!-- Always force latest IE rendering engine or request Chrome Frame -->
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta charset="UTF-8">
+  <!-- Use title if it's in the page YAML frontmatter -->
+  <title>BresoDEV Doc</title>
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Document</title>
-
+  <meta name="description" content="BresoDEV Doc" />
+  <meta name="keywords" content="bresodev" />
+  <link href="all.css" rel="stylesheet" type="text/css" />
+  
 </head>
 
 <style>
+  .codigo {
 
-     * {
+    background-color: rgb(70, 70, 70);
+    color: aliceblue;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0);
+  }
 
-        margin: 0;
+  .vm {
+    color: rgb(200, 100, 100);
+  }
 
-        padding: 0;
+  .vd {
+    color: rgb(100, 200, 100);
+  }
 
-        border: 0;
+  .az {
+    color: rgb(84, 84, 125);
+  }
 
-        font-family: 'Open Sans'; 
+  .lrj {
+    color: rgb(223, 145, 34);
+  }
 
-        cursor: pointer; 
+  .am {
+    color: rgb(242, 255, 0);
+  }
 
-        -webkit-tap-highlight-color: transparent;
+  .comentario {
+    color: rgb(24, 143, 93);
+  }
 
-        -webkit-touch-callout: none;
+  .cy {
+    color: rgb(7, 225, 221);
+  }
 
-    }
+  .ling {
+    color: rgb(255, 255, 255);
+    background-color: black;
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+
+  }
+
+  tr,
+  td {
+    border: 1px solid #666;
+    background-color: rgb(210, 210, 210);
+    padding: 5px;
+  }
+
+  button {
+    cursor: pointer;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+
+    width: 100%;
+    text-decoration: none;
+    padding: 5px;
+
+    background-color: #008cba;
+    color: white;
+    border: none;
+    font-weight: normal !important;
+    margin: 1px !important;
+    border-radius: 5px;
+  }
+
+  /*--------------------------------*/
+  .bg-vd {
+    background-color: rgb(20, 132, 63);
+  }
+
+  .bg-vm {
+    background-color: rgb(228, 77, 77);
+  }
+
+  /*--------------------------------*/
+  .hover-bg-vd:hover {
+    background-color: rgb(20, 132, 63);
+  }
+
+  .hover-bg-vm:hover {
+    background-color: rgb(228, 77, 77);
+  }
+
+  .hover-bg-az:hover {
+    background-color: #008cba;
+  }
 
 
+  .hover-bg-br:hover {
+    background-color: aliceblue;
+  }
 
-    html,
+  .hover-bg-pt:hover {
+    background-color: rgb(0, 0, 0);
+  }
 
-    body {
+  /*--------------------------------*/
+  .hover-f-vd:hover {
+    color: rgb(20, 132, 63);
+  }
 
-        background-color: rgb(226, 209, 209);
+  .hover-f-vm:hover {
+    color: rgb(228, 77, 77);
+  }
 
-        height: 100%;
+  .hover-f-az:hover {
+    color: #008cba;
+  }
 
-    }
+  .hover-f-br:hover {
+    color: aliceblue;
+  }
 
-    .dark{
-
-        margin-left: 10%;
-
-        width: 73%;
-
-        background-color: #333;
-
-        padding: 3%;
-
-        margin-top: 20px;
-
-        border-radius: 15px;
-
-        box-shadow: 5px 5px 22px rgb(0, 0, 0);
-
-        color: rgb(254, 254, 254);
-
-    }
-
-    .light{
-
-        margin-left: 10%;
-
-        width: 73%;
-
-        background-color: rgb(255, 255, 255);
-
-        padding: 3%;
-
-        margin-top: 20px;
-
-        border-radius: 15px;
-
-        box-shadow: 5px 5px 22px rgb(0, 0, 0);
-
-    }
-
-    h1{
-
-        font-size: 60px;
-
-    }
-
-    h3{
-
-        font-size: 70px;
-
-        margin-bottom: 0;
-
-    }
-
+  .hover-f-pt:hover {
+    color: rgb(0, 0, 0);
+  }
 </style>
 
 <body>
+  <header class="contain-to-grid">
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="index.html">&#128138; Medical List</a></h1>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <!-- Left Nav Section -->
+        <ul class="left">
+          <li class="item active" selected><a target="_blank" href="link1.html">Link 1</a></li>
+          <li class="item "><a target="_blank" href="link2.html">Link 2</a></li>
+          <li class="item "><a target="_blank" href="link3.html">Link 3</a></li>
+        </ul>
+      </section>
+    </nav>
+  </header>
+  <div class="wrapper">
+    <div class="row">
+      <div class="large-12 columns">
+        <br>
+        <h2>Boas Vindas!</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <p>
+         Olá, seja bem vindo(a) ao <b>Medical List</b>
+        </p>
+        <p>
+          Esse é o aplicativo ideal para quem sempre esqueçe qual remédio tomar em situações de emergência, ou até mesmo para quem deseja ter a sua própria lista de medicamentos pessoal na palma da mão!
+        </p>
+        <p>
+          Além de salvar seus medicamentos, é possível carregar listas de amigos, e até mesmo compartilhar a sua lista com outras pessoas!
+        </p>
+        <p>
+          Lembrando que seus medicamentos ficam salvos somente no dispositivo atual, e que nenhum outro dispositivo terá acesso as suas informações, nem mesmo o criador do programa, pois tudo fica armazenado e criptografado em seu smartphone
+        </p>
+        <p>Sendo assim, caso mude de celular, anote em um papel todos medicamentos antes, pois em outro celular, não irá recuperar as listas, pois como foi dito, tudo fica armazenado e criptografado em seu smartphone atual</p>
+ 
 
-    <center>
-
-        <h3>&#128138;</h3>
-
-        <h1>
-
-            
-
-            Medical<br>List
-
-        </h1>
-
-    </center>
-
-    <div class="dark" id="dark">
-
-        <center>
-
-            <h2>Tema Dark</h2>
-
-        </center>
-
+        <button id="Acessar">Aceitar e acessar o aplicativo</button>
+      </div>
     </div>
 
-    <div class="light" id="light">
 
-        <center>
+  </div>
+  <footer class="footer row">
+    <div class="columns">
+      <div class="footer_lists-container row collapse">
+        <div class="footer_social columns large-2">
+          <p class="footer_copyright">Copyright (c) 2024, BresoDEV</p>
+        </div>
 
-            <h2>Tema Light</h2>
-
-        </center>
-
+      </div>
     </div>
-
-    <center><br><br>
-
-        <b>by BresoDEV</b>
-
-    </center>
-
+  </footer>
 </body>
-
 <script>
 
+  if (localStorage.getItem('acesso_MedicalList')) {
+    window.location.href = 'tema.html'
+  }
 
-
-document.getElementById('dark').addEventListener('click', () => {
-
-        
-
-        window.location.href ='dark.html' 
-
-    })
-
-
-
-document.getElementById('light').addEventListener('click', () => {
-
-        
-
-        window.location.href ='light.html' 
-
-    })
-
-
-
-
-
+  document.getElementById('Acessar').addEventListener('click', () => {
+    localStorage.setItem('acesso_MedicalList', '1')
+    window.location.href = 'tema.html'
+  })
 
 
 </script>
-
+<script src="cavalo.js"></script>
 </html>
