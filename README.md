@@ -1,4 +1,4 @@
-![](https://img.shields.io/github/stars/bresodev/MedicalList.svg)
+![](https://img.shields.io/github/stars/bresodev.svg)
   
 ![](https://img.shields.io/github/forks/bresodev/MedicalList.svg)
   
